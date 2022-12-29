@@ -81,7 +81,7 @@ app.post('/login',async (req,res) => {
     var userToken = await jwt.sign({email:userData.email},JWT_SECRET)
     res.json({message:"Successfully logged in ",profile:userData.name})
     console.log(userToken)
-    res.header('auth',userToken).send(userToken);
+    //res.header('auth',userToken).send(userToken);
     
     
     
